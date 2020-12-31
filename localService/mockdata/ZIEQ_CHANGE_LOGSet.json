@@ -1,0 +1,161 @@
+[{
+	"ChangeId": "1",
+	"RequestId": "R23031",
+	"EquipmentType": "EQUI",
+	"EquipmentDec": "PAC-MCP9 U1",
+	"Serial": "20060330030",
+	"SubName": "beverly",
+	"Distinct": "Distinct 1",
+	"Manufacturers1": "20060330010",
+	"Manufacturers2": "20060330017",
+	"RelayBookFirware": "192.168.37.17710",
+	"RelayBookFirware2": "192.168.37.17710",
+	"__metadata": {
+		"uri": "ZIEQ_CHANGE_LOGSet('1')",
+		"type": "ZIEQ_EQ_CHLG_PRELAY_CARD_SRV.ZIEQ_CHANGE_LOG"
+	}
+}, {
+	"ChangeId": "2",
+	"RequestId": "R23032",
+	"EquipmentType": "EQKT",
+	"EquipmentDec": "PAC-MCP9 U2",
+	"Serial": "20060330031",
+	"SubName": "beverly",
+	"Distinct": "101997",
+	"Manufacturers1": "20060330011",
+	"Manufacturers2": "20060330018",
+	"RelayBookFirware": "192.168.37.17710",
+	"RelayBookFirware2": "192.168.37.17710",
+	"__metadata": {
+		"uri": "ZIEQ_CHANGE_LOGSet('2')",
+		"type": "ZIEQ_EQ_CHLG_PRELAY_CARD_SRV.ZIEQ_CHANGE_LOG"
+	}
+}, {
+	"ChangeId": "3",
+	"RequestId": "R23033",
+	"EquipmentType": "EQUZ",
+	"EquipmentDec": "PAC-MCP3 U3",
+	"Serial": "20060330032",
+	"SubName": "beverly",
+	"Distinct": "101994",
+	"Manufacturers1": "20060330012",
+	"Manufacturers2": "20060330018",
+	"RelayBookFirware": "192.168.37.17710",
+	"RelayBookFirware2": "192.168.37.17710",
+	"__metadata": {
+		"uri": "ZIEQ_CHANGE_LOGSet('3')",
+		"type": "ZIEQ_EQ_CHLG_PRELAY_CARD_SRV.ZIEQ_CHANGE_LOG"
+	}
+}, {
+	"ChangeId": "4",
+	"RequestId": "R23034",
+	"EquipmentType": "ILOA",
+	"EquipmentDec": "PAC-MCP90 U24",
+	"Serial": "20060330033",
+	"SubName": "beverly",
+	"Distinct": "101995",
+	"Manufacturers1": "20060330013",
+	"Manufacturers2": "20060330019",
+	"RelayBookFirware": "192.168.37.17710",
+	"RelayBookFirware2": "192.168.37.17710",
+	"__metadata": {
+		"uri": "ZIEQ_CHANGE_LOGSet('4')",
+		"type": "ZIEQ_EQ_CHLG_PRELAY_CARD_SRV.ZIEQ_CHANGE_LOG"
+	}
+}, {
+	"ChangeId": "5",
+	"RequestId": "R23035",
+	"EquipmentType": "IHSG",
+	"EquipmentDec": "PAC-MCP9 U25",
+	"Serial": "20060330034",
+	"SubName": "beverly",
+	"Distinct": "101995",
+	"Manufacturers1": "20060330014",
+	"Manufacturers2": "20060330020",
+	"RelayBookFirware": "192.168.37.17710",
+	"RelayBookFirware2": "192.168.37.17710",
+	"__metadata": {
+		"uri": "ZIEQ_CHANGE_LOGSet('5')",
+		"type": "ZIEQ_EQ_CHLG_PRELAY_CARD_SRV.ZIEQ_CHANGE_LOG"
+	}
+}, {
+	"ChangeId": "6",
+	"RequestId": "R23036",
+	"EquipmentType": "IHPA",
+	"EquipmentDec": "PAC-MCP9 U26",
+	"Serial": "20060330035",
+	"SubName": "beverly",
+	"Distinct": "Distin101994",
+	"Manufacturers1": "20060330015",
+	"Manufacturers2": "20060330021",
+	"RelayBookFirware": "192.168.37.17710",
+	"RelayBookFirware2": "192.168.37.17710",
+	"__metadata": {
+		"uri": "ZIEQ_CHANGE_LOGSet('6')",
+		"type": "ZIEQ_EQ_CHLG_PRELAY_CARD_SRV.ZIEQ_CHANGE_LOG"
+	}
+}, {
+	"ChangeId": "7",
+	"RequestId": "R23037",
+	"EquipmentType": "FLEET",
+	"EquipmentDec": "PAC-MCP9 U27",
+	"Serial": "beverly",
+	"SubName": "beverly",
+	"Distinct": "101993",
+	"Manufacturers1": "20060330016",
+	"Manufacturers2": "20060330022",
+	"RelayBookFirware": "192.168.37.17710",
+	"RelayBookFirware2": "192.168.37.17710",
+	"__metadata": {
+		"uri": "ZIEQ_CHANGE_LOGSet('7')",
+		"type": "ZIEQ_EQ_CHLG_PRELAY_CARD_SRV.ZIEQ_CHANGE_LOG"
+	}
+}, {
+	"ChangeId": "8",
+	"RequestId": "R23038",
+	"EquipmentType": "T024I",
+	"EquipmentDec": "PAC-MCP9 U28",
+	"Serial": "Serial 8",
+	"SubName": "beverly",
+	"Distinct": "Distinct 8",
+	"Manufacturers1": "20060330022",
+	"Manufacturers2": "20060330044",
+	"RelayBookFirware": "RelayBookFirware 8",
+	"RelayBookFirware2": "192.168.37.17710",
+	"__metadata": {
+		"uri": "ZIEQ_CHANGE_LOGSet('8')",
+		"type": "ZIEQ_EQ_CHLG_PRELAY_CARD_SRV.ZIEQ_CHANGE_LOG"
+	}
+}, {
+	"ChangeId": "9",
+	"RequestId": "R23038",
+	"EquipmentType": "T024I",
+	"EquipmentDec": "PAC-MCP9 U28",
+	"Serial": "20060330037",
+	"SubName": "beverly",
+	"Distinct": "101992",
+	"Manufacturers1": "20060330016",
+	"Manufacturers2": "20060330023",
+	"RelayBookFirware": "192.168.37.17710",
+	"RelayBookFirware2": "192.168.37.17710",
+	"__metadata": {
+		"uri": "ZIEQ_CHANGE_LOGSet('9')",
+		"type": "ZIEQ_EQ_CHLG_PRELAY_CARD_SRV.ZIEQ_CHANGE_LOG"
+	}
+}, {
+	"ChangeId": "10",
+	"RequestId": "R23030",
+	"EquipmentType": "T370T",
+	"EquipmentDec": "PAC-MCP7 U30",
+	"Serial": "20060330039",
+	"SubName": "beverly",
+	"Distinct": "101991",
+	"Manufacturers1": "20060330016",
+	"Manufacturers2": "20060330025",
+	"RelayBookFirware": "192.168.37.177",
+	"RelayBookFirware2": "192.168.37.17710",
+	"__metadata": {
+		"uri": "ZIEQ_CHANGE_LOGSet('10')",
+		"type": "ZIEQ_EQ_CHLG_PRELAY_CARD_SRV.ZIEQ_CHANGE_LOG"
+	}
+}]
