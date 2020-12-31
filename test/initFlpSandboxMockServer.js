@@ -1,13 +1,20 @@
-sap.ui.define(["../localService/mockserver", "./flpSandbox", "sap/ui/fl/FakeLrepConnectorLocalStorage", "sap/m/MessageBox"], function (e, a,
-	n, o) {
+sap.ui.define([
+	"../localService/mockserver",
+	"./flpSandbox",
+	"sap/ui/fl/FakeLrepConnectorLocalStorage",
+	"sap/m/MessageBox"
+], function (mockserver, flpSandbox, FakeLrepConnectorLocalStorage, MessageBox) {
 	"use strict";
-	e.start();
-	var i = [];
-	i.push(e.init());
-	i.push(a.init());
-	Promise.all(i).catch(function (e) {
-		o.error(e.message)
+	mockserver.start();
+	var aInitializations = [];
+
+	// initialize the mock server
+	aInitializations.push(mockserver.init());
+	aInitializations.push(flpSandbox.init());
+
+	Promise.all(aInitializations).catch(function (oError) {
+		MessageBox.error(oError.message);
 	}).finally(function () {
-		n.enableFakeConnector()
-	})
+		FakeLrepConnectorLocalStorage.enableFakeConnector();
+	});
 });

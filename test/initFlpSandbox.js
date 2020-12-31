@@ -1,13 +1,17 @@
-sap.ui.define(["./flpSandbox", "sap/ui/fl/FakeLrepConnectorLocalStorage", "sap/m/MessageBox","com/mindset/eam/equipmentLog/localService/mockserver"], function (e, n, o,Mockserver) {
+sap.ui.define([
+	"./flpSandbox",
+	"sap/ui/fl/FakeLrepConnectorLocalStorage",
+	"sap/m/MessageBox",
+	"com/mindset/eam/equipmentLogg/localService/mockserver"
+], function (flpSandbox, FakeLrepConnectorLocalStorage, MessageBox,Mockserver) {
 	"use strict";
-	e.init().then(function () {
-		Mockserver.init();
+	Mockserver.init();
 
 	// initialize the embedded component on the HTML page
-	 sap.ui.require(["sap/ui/core/ComponentSupport"]);
-		n.enableFakeConnector()
-		
-	}, function (e) {
-		o.error(e.message)
-	})
+	sap.ui.require(["sap/ui/core/ComponentSupport"]);
+	flpSandbox.init().then(function () {
+		FakeLrepConnectorLocalStorage.enableFakeConnector();
+	}, function (oError) {
+		MessageBox.error(oError.message);
+	});
 });
