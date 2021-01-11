@@ -43,9 +43,10 @@
         "name": "nppd_gw",
         "entryPath": "/sap/opu/odata"
       },
-      "description": "NPPD Gateway"
+      "description": "Gateway"
     }
   ],
-  "welcomeFile": "/test/flpSandbox.html",
+  "welcomeFile": "index.html",
+   "authenticationMethod": "none",
   "sendWelcomeFileRedirect": true
 }

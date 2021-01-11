@@ -39,8 +39,8 @@ sap.ui.define([
 							"tiles": [{
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
-									"title": "NPPD Equipment Change Log",
-									"targetURL": "#NPPDEquipmentChangeLog-display"
+									"title": "Equipment Change Log",
+									"targetURL": "#EquipmentChangeLog-display"
 								}
 							}]
 						}]
@@ -52,10 +52,10 @@ sap.ui.define([
 					"config": {
 						"inbounds": {
 							"NPPDEquipmentChangeLog-display": {
-								"semanticObject": "NPPDEquipmentChangeLog",
+								"semanticObject": "EquipmentChangeLog",
 								"action": "display",
 
-								"title": "NPPD Equipment Change Log",
+								"title": "Equipment Change Log",
 								"signature": {
 									"parameters": {}
 								},
