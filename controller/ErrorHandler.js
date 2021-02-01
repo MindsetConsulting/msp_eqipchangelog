@@ -17,21 +17,6 @@ sap.ui.define(["sap/ui/base/Object", "sap/m/MessageBox"], function (e, s) {
 					this._showServiceError(s.response)
 				}
 			}, this)
-		},
-		// _showServiceError: function (e) {
-		// 	if (this._bMessageOpen) {
-		// 		return
-		// 	}
-		// 	this._bMessageOpen = true;
-		// 	s.error(this._sErrorText, {
-		// 		id: "serviceErrorMessageBox",
-		// 		details: e,
-		// 		styleClass: this._oComponent.getContentDensityClass(),
-		// 		actions: [s.Action.CLOSE],
-		// 		onClose: function () {
-		// 			this._bMessageOpen = false
-		// 		}.bind(this)
-		// 	})
-		// }
+		}
 	});
 });
