@@ -1,9 +1,9 @@
 <mvc:View controllerName="com.mindset.eam.equipmentLog.controller.Worklist" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:semantic="sap.f.semantic" xmlns:footerbar="sap.ushell.ui.footerbar">
 	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false">
-		<semantic:titleHeading>
-			<Title text="{i18n>worklistTitle}" level="H2"/>
-		</semantic:titleHeading>
+		<!--<semantic:titleHeading>-->
+			<!--<Title text="{i18n>worklistTitle}" level="H2"/>-->
+		<!--</semantic:titleHeading>-->
 		<semantic:content>
 			<Table id="table" width="auto" items="{ path: '/ZEQuipmentChangeLogSet', sorter: { path: 'ApprovedOn', descending: true } }"
 				noDataText="{worklistView>/tableNoDataText}" busyIndicatorDelay="{worklistView>/tableBusyDelay}" growing="true" growingScrollToLoad="true"
