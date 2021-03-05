@@ -1,0 +1,77 @@
+ID: equipchangelog
+_schema-version: 3.2.0
+version: 0.0.1
+parameters:
+  enable-parallel-deployments: true
+modules:
+  - name: webapp_deployer
+    type: com.sap.application.content
+    path: deployer
+    requires:
+      - name: equipchangelog_html5_repo_host
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: resources
+      requires:
+        - name: uimodule
+          artifacts:
+            - dist/uimodule.zip
+          target-path: resources/
+  - name: equipchangelogdestination-content
+    type: com.sap.application.content
+    build-parameters:
+      no-source: true
+    requires:
+      - name: equipchangelog_uaa
+        parameters:
+          service-key:
+            name: equipchangelog_uaa-key
+      - name: equipchangelog_html5_repo_host
+        parameters:
+          service-key:
+            name: equipchangelog_html5_repo_host-key
+      - name: equipchangelog_destination
+        parameters:
+          content-target: true
+    parameters:
+      content:
+        subaccount:
+          existing_destinations_policy: update
+          destinations:
+            - Name: equipchangelog_html5_repo_host
+              ServiceInstanceName: equipchangelog_html5_repo_host
+              ServiceKeyName: equipchangelog_html5_repo_host-key
+              sap.cloud.service: equipchangelog.service
+            - Name: equipchangelog_uaa
+              Authentication: OAuth2UserTokenExchange
+              ServiceInstanceName: equipchangelog_uaa
+              ServiceKeyName: equipchangelog_uaa-key
+              sap.cloud.service: equipchangelog.service
+  - name: uimodule
+    type: html5
+    path: uimodule
+    build-parameters:
+      builder: custom
+      commands:
+        - npm run build:uimodule --prefix ..
+      supported-platforms: []
+resources:
+  - name: equipchangelog_destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service-plan: lite
+      service: destination
+  - name: equipchangelog_html5_repo_host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service-plan: app-host
+      service: html5-apps-repo
+      config:
+        sizeLimit: 2
+  - name: equipchangelog_uaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa

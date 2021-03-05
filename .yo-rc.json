@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "equipchangelog",
+    "namespace": "com.mindset.am",
+    "platform": "SAP Launchpad service",
+    "viewtype": "XML",
+    "viewname": "MainView",
+    "ui5libs": "Content delivery network (SAPUI5)",
+    "newdir": false,
+    "namespaceURI": "com/mindset/am",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
