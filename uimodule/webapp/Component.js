@@ -1,30 +1,35 @@
-sap.ui.define([
-  "sap/ui/core/UIComponent",
-  "sap/ui/Device",
-  "com/mindset/am/equipchangelog/model/models"
-], function(UIComponent, Device, models) {
-  "use strict";
-
-  return UIComponent.extend("com.mindset.am.equipchangelog.Component", {
-
-    metadata: {
-      manifest: "json"
-    },
-
-    /**
-     * The component is initialized by UI5 automatically during the startup of the app and calls the init method once.
-     * @public
-     * @override
-     */
-    init: function() {
-      // call the base component's init function
-      UIComponent.prototype.init.apply(this, arguments);
-
-      // enable routing
-      this.getRouter().initialize();
-
-      // set the device model
-      this.setModel(models.createDeviceModel(), "device");
-    }
-  });
+sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "./model/models", "./controller/ErrorHandler","com/mindset/am/equipchangelog/localService/mockserver"], function (t, e, s, i,Mockserver) {
+	"use strict";
+	Mockserver.init();                         
+	return t.extend("com.mindset.am.equipchangelog.Component", {
+		metadata: {
+			manifest: "json"
+		},
+		init: function () {
+		
+			// var oModel = new sap.ui.model.odata.v2.ODataModel({serviceUrl: "/destinations/service"});
+			// this.setModel(oModel);
+			t.prototype.init.apply(this, arguments);
+			this._oErrorHandler = new i(this);
+			this.setModel(s.createDeviceModel(), "device");
+			this.setModel(s.createFLPModel(), "FLP");
+			this.getRouter().initialize();
+		},
+		destroy: function () {
+			this._oErrorHandler.destroy();
+			t.prototype.destroy.apply(this, arguments)
+		},
+		getContentDensityClass: function () {
+			if (this._sContentDensityClass === undefined) {
+				if (document.body.classList.contains("sapUiSizeCozy") || document.body.classList.contains("sapUiSizeCompact")) {
+					this._sContentDensityClass = ""
+				} else if (!e.support.touch) {
+					this._sContentDensityClass = "sapUiSizeCompact"
+				} else {
+					this._sContentDensityClass = "sapUiSizeCozy"
+				}
+			}
+			return this._sContentDensityClass
+		}
+	})
 });

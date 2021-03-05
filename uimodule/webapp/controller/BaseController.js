@@ -1,70 +1,39 @@
-sap.ui.define([
-  "sap/ui/core/mvc/Controller",
-  "sap/ui/core/routing/History",
-  "sap/ui/core/UIComponent",
-  "com/mindset/am/equipchangelog/model/formatter"
-], function(Controller, History, UIComponent, formatter) {
-  "use strict";
-
-  return Controller.extend("com.mindset.am.equipchangelog.controller.BaseController", {
-
-    formatter: formatter,
-
-    /**
-     * Convenience method for getting the view model by name in every controller of the application.
-     * @public
-     * @param {string} sName the model name
-     * @returns {sap.ui.model.Model} the model instance
-     */
-    getModel: function(sName) {
-      return this.getView().getModel(sName);
-    },
-
-    /**
-     * Convenience method for setting the view model in every controller of the application.
-     * @public
-     * @param {sap.ui.model.Model} oModel the model instance
-     * @param {string} sName the model name
-     * @returns {sap.ui.mvc.View} the view instance
-     */
-    setModel: function(oModel, sName) {
-      return this.getView().setModel(oModel, sName);
-    },
-
-    /**
-     * Convenience method for getting the resource bundle.
-     * @public
-     * @returns {sap.ui.model.resource.ResourceModel} the resourceModel of the component
-     */
-    getResourceBundle: function() {
-      return this.getOwnerComponent().getModel("i18n").getResourceBundle();
-    },
-
-    /**
-     * Method for navigation to specific view
-     * @public
-     * @param {string} psTarget Parameter containing the string for the target navigation
-     * @param {Object.<string, string>} pmParameters? Parameters for navigation
-     * @param {boolean} pbReplace? Defines if the hash should be replaced (no browser history entry) or set (browser history entry)
-     */
-    navTo: function(psTarget, pmParameters, pbReplace) {
-      this.getRouter().navTo(psTarget, pmParameters, pbReplace);
-    },
-
-    getRouter: function() {
-      return UIComponent.getRouterFor(this);
-    },
-
-    onNavBack: function() {
-      var sPreviousHash = History.getInstance().getPreviousHash();
-
-      if (sPreviousHash !== undefined) {
-        window.history.back();
-      } else {
-        this.getRouter().navTo("appHome", {}, true /*no history*/ );
-      }
-    }
-
-  });
-
+sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/UIComponent", "sap/m/library"], function (e, t, n) {
+	"use strict";
+	var r = n.URLHelper;
+	return e.extend("com.mindset.am.equipchangelog.controller.BaseController", {
+		getRouter: function () {
+			return t.getRouterFor(this)
+		},
+		getModel: function (e) {
+			return this.getView().getModel(e)
+		},
+		setModel: function (e, t) {
+			return this.getView().setModel(e, t)
+		},
+		getResourceBundle: function () {
+			return this.getOwnerComponent().getModel("i18n").getResourceBundle()
+		},
+		onShareEmailPress: function () {
+			var e = this.getModel("objectView") || this.getModel("worklistView");
+			r.triggerEmail(null, e.getProperty("/shareSendEmailSubject"), e.getProperty("/shareSendEmailMessage"))
+		},
+		addHistoryEntry: function () {
+			var e = [];
+			return function (t, n) {
+				if (n) {
+					e = []
+				}
+				var r = e.some(function (e) {
+					return e.intent === t.intent
+				});
+				if (!r) {
+					e.push(t);
+					this.getOwnerComponent().getService("ShellUIService").then(function (t) {
+						t.setHierarchy(e)
+					})
+				}
+			}
+		}()
+	})
 });
