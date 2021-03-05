@@ -1,121 +1,211 @@
 {
     "resources": [
         {
-            "name": "localService/mockserver.js"
+            "name": ".che/project.json"
         },
         {
-            "name": "i18n/i18n.properties",
-            "raw": "i18n/i18n.properties"
-        },
-        {
-            "name": "model/models.js"
-        },
-        {
-            "name": "model/formatter.js"
-        },
-        {
-            "name": "manifest.json"
-        },
-        {
-            "name": "controller/Worklist.controller.js"
-        },
-        {
-            "name": "controller/Object.controller.js"
-        },
-        {
-            "name": "controller/NotFound.controller.js"
-        },
-        {
-            "name": "controller/ErrorHandler.js"
-        },
-        {
-            "name": "controller/BaseController.js"
-        },
-        {
-            "name": "controller/App.controller.js"
-        },
-        {
-            "name": "Component.js"
-        },
-        {
-            "name": "manifest-bundle.zip"
+            "name": ".gitignore"
         },
         {
             "name": "Component-preload.js",
             "merged": true
         },
         {
-            "name": "model/models-dbg.js",
-            "isDebug": true
+            "name": "Component.js"
         },
         {
-            "name": "model/formatter-dbg.js",
-            "isDebug": true
+            "name": "Gruntfile.js"
         },
         {
-            "name": "localService/mockserver-dbg.js",
-            "isDebug": true
+            "name": "README.md"
         },
         {
-            "name": "controller/Worklist-dbg.controller.js",
-            "isDebug": true
+            "name": "controller/App.controller.js"
         },
         {
-            "name": "controller/Object-dbg.controller.js",
-            "isDebug": true
+            "name": "controller/BaseController.js"
         },
         {
-            "name": "controller/NotFound-dbg.controller.js",
-            "isDebug": true
+            "name": "controller/ErrorHandler.js"
         },
         {
-            "name": "controller/ErrorHandler-dbg.js",
-            "isDebug": true
+            "name": "controller/NotFound.controller.js"
         },
         {
-            "name": "controller/BaseController-dbg.js",
-            "isDebug": true
+            "name": "controller/Object.controller.js"
         },
         {
-            "name": "controller/App-dbg.controller.js",
-            "isDebug": true
+            "name": "controller/Worklist.controller.js"
         },
         {
-            "name": "Component-dbg.js",
-            "isDebug": true
+            "name": "dist"
         },
         {
-            "name": "../../../../sap-ui-version.json"
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "localService/mockdata/ZEQuipmentChangeLogSet.json"
+        },
+        {
+            "name": "localService/mockdata/ZIEQ_CHANGE_LOGSet.json"
+        },
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "manifest-bundle.zip"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "model/formatter.js"
+        },
+        {
+            "name": "model/models.js"
         },
         {
             "name": "neo-app.json"
         },
         {
-            "name": "di.code-validation.core_issues.json"
+            "name": "node_modules"
         },
         {
-            "name": "view/Worklist.view.xml"
+            "name": "package-lock.json"
         },
         {
-            "name": "view/SortDialog.fragment.xml"
+            "name": "package.json"
         },
         {
-            "name": "view/ObjectNotFound.view.xml"
+            "name": "resources/sap-ui-version.json"
         },
         {
-            "name": "view/Object.view.xml"
+            "name": "resources.json",
+            "merged": true
         },
         {
-            "name": "view/NotFound.view.xml"
+            "name": "sap-ui-cachebuster-info.json"
         },
         {
-            "name": "view/FilterDialog.fragment.xml"
+            "name": "test/flpSandbox.html"
+        },
+        {
+            "name": "test/flpSandbox.js"
+        },
+        {
+            "name": "test/flpSandboxMockServer.html"
+        },
+        {
+            "name": "test/initFlpSandbox.js"
+        },
+        {
+            "name": "test/initFlpSandboxMockServer.js"
+        },
+        {
+            "name": "test/integration/AllJourneys.js"
+        },
+        {
+            "name": "test/integration/FLPIntegrationJourney.js"
+        },
+        {
+            "name": "test/integration/NavigationJourney.js"
+        },
+        {
+            "name": "test/integration/NotFoundJourney.js"
+        },
+        {
+            "name": "test/integration/ObjectJourney.js"
+        },
+        {
+            "name": "test/integration/WorklistJourney.js"
+        },
+        {
+            "name": "test/integration/arrangements/FLP.js"
+        },
+        {
+            "name": "test/integration/arrangements/Startup.js"
+        },
+        {
+            "name": "test/integration/opaTests.qunit.html"
+        },
+        {
+            "name": "test/integration/opaTests.qunit.js"
+        },
+        {
+            "name": "test/integration/pages/App.js"
+        },
+        {
+            "name": "test/integration/pages/Browser.js"
+        },
+        {
+            "name": "test/integration/pages/Common.js"
+        },
+        {
+            "name": "test/integration/pages/NotFound.js"
+        },
+        {
+            "name": "test/integration/pages/Object.js"
+        },
+        {
+            "name": "test/integration/pages/Worklist.js"
+        },
+        {
+            "name": "test/integration/pages/shareOptions.js"
+        },
+        {
+            "name": "test/testsuite.qunit.html"
+        },
+        {
+            "name": "test/testsuite.qunit.js"
+        },
+        {
+            "name": "test/unit/AllTests.js"
+        },
+        {
+            "name": "test/unit/helper/FakeI18nModel.js"
+        },
+        {
+            "name": "test/unit/model/formatter.js"
+        },
+        {
+            "name": "test/unit/model/models.js"
+        },
+        {
+            "name": "test/unit/unitTests.qunit.html"
+        },
+        {
+            "name": "test/unit/unitTests.qunit.js"
+        },
+        {
+            "name": "test.html"
         },
         {
             "name": "view/App.view.xml"
         },
         {
-            "name": "localService/metadata.xml"
+            "name": "view/FilterDialog.fragment.xml"
+        },
+        {
+            "name": "view/NotFound.view.xml"
+        },
+        {
+            "name": "view/Object.view.xml"
+        },
+        {
+            "name": "view/ObjectNotFound.view.xml"
+        },
+        {
+            "name": "view/SortDialog.fragment.xml"
+        },
+        {
+            "name": "view/Worklist.view.xml"
         }
     ]
 }
