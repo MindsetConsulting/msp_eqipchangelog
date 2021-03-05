@@ -9,12 +9,12 @@ sap.ui.define(["sap/ui/base/Object", "sap/m/MessageBox"], function (e, s) {
 			this._sErrorText = this._oResourceBundle.getText("errorText");
 			this._oModel.attachMetadataFailed(function (e) {
 				var s = e.getParameters();
-				this._showServiceError(s.response)
+				// this._showServiceError(s.response)
 			}, this);
 			this._oModel.attachRequestFailed(function (e) {
 				var s = e.getParameters();
 				if (s.response.statusCode !== "404" || s.response.statusCode === 404 && s.response.responseText.indexOf("Cannot POST") === 0) {
-					this._showServiceError(s.response)
+					// this._showServiceError(s.response)
 				}
 			}, this)
 		}
